@@ -1,0 +1,246 @@
+/* Import Google Fonts (Poppins for consistency) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.footer {
+  background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%); /* Dark gradient background */
+  color: #ecf0f1;
+  padding: 60px 0 20px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  border-top: 4px solid #f1641e; /* Orange accent */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  padding: 0 20px;
+}
+
+/* Footer Sections */
+.footer-section {
+  text-align: left;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #f1641e; /* Orange heading */
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 40px;
+  height: 2px;
+  background-color: #f1641e;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ecf0f1;
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  color: #bdc3c7;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.footer-section a {
+  color: #f1641e;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #d8541b;
+}
+
+/* Contact Section */
+.contact-section p {
+  margin-bottom: 8px;
+}
+
+/* Follow Us Section */
+.follow-section .social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  font-size: 24px;
+  color: #ecf0f1;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #f1641e;
+  transform: scale(1.1);
+}
+
+/* Newsletter Section */
+.newsletter-section .newsletter-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  flex-direction: column;
+}
+
+.newsletter-section input {
+  padding: 10px 15px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  flex: 1;
+  background-color: #34495e;
+  color: #ecf0f1;
+}
+
+.newsletter-section input::placeholder {
+  color: #bdc3c7;
+}
+
+.newsletter-section button {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f1641e;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.newsletter-section button:hover {
+  background-color: #d8541b;
+  transform: scale(1.05);
+}
+
+/* Download App Section */
+.download-section .download-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 14px;
+  font-weight: 500;
+  background: linear-gradient(90deg, #f1641e 0%, #d8541b 100%);
+  color: #fff;
+  border-radius: 25px;
+  margin-top: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-section .download-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(241, 100, 30, 0.3);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #bdc3c7;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 15px;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-section h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .follow-section .social-icons {
+    justify-content: center;
+  }
+
+  .newsletter-section .newsletter-form {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .newsletter-section input {
+    width: 100%;
+  }
+
+  .newsletter-section button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .download-section .download-btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 0 15px;
+  }
+
+  .footer-section h3 {
+    font-size: 18px;
+  }
+
+  .footer-section h4 {
+    font-size: 16px;
+  }
+
+  .footer-section p {
+    font-size: 13px;
+  }
+
+  .social-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+
+  .newsletter-section input,
+  .newsletter-section button,
+  .download-section .download-btn {
+    font-size: 13px;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+  }
+}

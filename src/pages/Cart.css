@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.cart-container {
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  max-width: 90%;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #f9f9f9 0%, #e8ecef 100%);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  background-image: radial-gradient(circle at 50% 50%, rgba(241, 100, 30, 0.05) 0%, transparent 70%);
+}
+
+.cart-content {
+  display: flex;
+  width: 100%;
+  gap: 40px;
+}
+
+/* Left Side: Product Details (60%) */
+.product-details {
+  flex: 0 0 60%;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+
+
+.product-image-container {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.product-image {
+  width: 100%;
+  max-width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+
+.product-image-container h2 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-top: 20px;
+  position: relative;
+}
+
+.product-image-container h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5px;
+  width: 50px;
+  height: 2px;
+  background-color: #f1641e;
+}
+
+.product-info-details {
+  padding: 20px;
+}
+
+.product-info-details p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.product-info-details p strong {
+  color: #2c3e50;
+}
+
+.info-icon {
+  color: #f1641e;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.info-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Right Side: Delivery Form (40%) */
+.delivery-form {
+  flex: 0 0 40%;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+
+
+.delivery-form h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #f1641e;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.delivery-form h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 40px;
+  height: 2px;
+  background-color: #f1641e;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.form-icon {
+  color: #f1641e;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.form-icon:hover {
+  transform: scale(1.2);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #f1641e;
+  box-shadow: 0 0 8px rgba(241, 100, 30, 0.2);
+  transform: translateY(-2px);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.calculation-section {
+  margin-top: 25px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.calculation-section h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.calculation-section p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.calculation-section p strong {
+  color: #2c3e50;
+}
+
+.add-to-cart-submit-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(90deg, #f1641e 0%, #d8541b 100%);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-to-cart-submit-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(241, 100, 30, 0.3);
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #ffe6e6;
+  border-radius: 5px;
+}
+
+.success-message {
+  color: #2ecc71;
+  font-size: 14px;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #e6ffed;
+  border-radius: 5px;
+}
+
+/* Animations (Removed unused spin and bounce, kept fadeIn) */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease;
+}
+
+.fade-in-delay-1 {
+  animation: fadeIn 1s ease;
+}
+
+.fade-in-delay-2 {
+  animation: fadeIn 1.2s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .cart-container {
+    width: 85%;
+  }
+
+  .cart-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .product-details,
+  .delivery-form {
+    flex: 0 0 100%;
+  }
+
+  .product-image {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cart-container {
+    padding: 30px;
+    width: 90%;
+  }
+
+  .product-image {
+    height: 250px;
+  }
+
+  .product-image-container h2 {
+    font-size: 22px;
+  }
+
+  .product-info-details p {
+    font-size: 15px;
+  }
+
+  .info-icon,
+  .form-icon {
+    font-size: 16px;
+  }
+
+  .delivery-form h3 {
+    font-size: 20px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 13px;
+  }
+
+  .calculation-section h4 {
+    font-size: 15px;
+  }
+
+  .calculation-section p {
+    font-size: 13px;
+  }
+
+  .add-to-cart-submit-btn {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .product-image {
+    height: 200px;
+  }
+
+  .product-image-container h2 {
+    font-size: 18px;
+  }
+
+  .product-info-details p {
+    font-size: 14px;
+  }
+
+  .info-icon,
+  .form-icon {
+    font-size: 14px;
+  }
+
+  .delivery-form h3 {
+    font-size: 18px;
+  }
+
+  .form-group label {
+    font-size: 12px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 12px;
+  }
+
+  .calculation-section h4 {
+    font-size: 14px;
+  }
+
+  .calculation-section p {
+    font-size: 12px;
+  }
+
+  .add-to-cart-submit-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

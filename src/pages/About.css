@@ -1,0 +1,175 @@
+/* Import Google Fonts (Poppins for consistency) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.about-container {
+    font-family: 'Poppins', sans-serif;
+    width: 100%; /* Changed to 100% to fit the parent container (home-container) */
+    max-width: 100%; /* Limits the width to match typical content containers */
+    background: linear-gradient(135deg, #d39797 0%, #77a5eb 100%); /* Softer gradient for elegance */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px; /* Increased padding for a spacious feel */
+    box-sizing: border-box;
+    border-radius: 20px; /* Slightly larger border-radius for a modern look */
+    margin: 0 auto; /* Center the container horizontally */
+    background-image: radial-gradient(circle at 50% 50%, rgba(241, 100, 30, 0.05) 0%, transparent 70%); /* Subtle radial glow */
+  }
+
+/* What is Swift Store Section */
+.what-is-section {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 20px;
+  border-radius: 10px;;
+}
+
+.what-is-section h2 {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #f1641e; /* Orange accent */
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.what-is-section h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5px;
+  width: 50px;
+  height: 2px;
+  background-color: #f1641e;
+}
+
+.what-is-section p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Mission, Vision, Core Values Section */
+.values-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+  max-width: 960px;
+}
+
+.value-item {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.value-icon {
+  font-size: 40px;
+  color: #f1641e;
+  margin-bottom: 15px;
+}
+
+.value-item h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.value-item p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-container {
+    width: 85%;
+  }
+
+  .values-section {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding-top: 100px;
+    width: 90%;
+  }
+
+  .what-is-section h2 {
+    font-size: 13px;
+  }
+
+  .what-is-section p {
+    font-size: 15px;
+  }
+
+  .values-section {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .value-item {
+    padding: 15px;
+  }
+
+  .value-icon {
+    font-size: 36px;
+  }
+
+  .value-item h3 {
+    font-size: 16px;
+  }
+
+  .value-item p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    width: 95%;
+    padding: 20px;
+    padding-top: 120px;
+  }
+
+  .what-is-section {
+    padding: 15px;
+  }
+
+  .what-is-section h2 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+
+  .what-is-section p {
+    font-size: 14px;
+  }
+
+  .value-icon {
+    font-size: 32px;
+  }
+
+  .value-item h3 {
+    font-size: 15px;
+  }
+
+  .value-item p {
+    font-size: 12px;
+  }
+}

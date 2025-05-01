@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.added-cart-container {
+  font-family: 'Poppins', sans-serif;
+  padding: 40px;
+  max-width: 90%;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #f9f9f9 0%, #e8ecef 100%);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  background-image: radial-gradient(circle at 50% 50%, rgba(241, 100, 30, 0.05) 0%, transparent 70%);
+}
+
+.added-cart-container h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.added-cart-container h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5px;
+  width: 50px;
+  height: 2px;
+  background-color: #f1641e;
+}
+
+/* No Orders Message */
+.no-orders {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Error Message */
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+  background-color: #ffe6e6;
+  border-radius: 5px;
+}
+
+/* Orders Table */
+.orders-table {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  overflow-x: auto; /* Allow horizontal scrolling on small screens */
+  margin-bottom: 30px;
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /* Fixed width for delete button, equal width for others */
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  min-width: 1030px;
+}
+
+.table-header {
+  background-color: #f1641e;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.table-row {
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.table-row:hover {
+  background-color: #f9f9f9;
+}
+
+.table-row span {
+  font-size: 14px;
+  color: #2c3e50;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.delete-btn:hover {
+  color: #c0392b;
+}
+
+/* Continue Shopping Button */
+.continue-shopping {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.continue-shopping-btn {
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(90deg, #f1641e 0%, #d8541b 100%);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.continue-shopping-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(241, 100, 30, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.added-cart-container {
+  animation: fadeIn 0.8s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .added-cart-container {
+    width: 85%;
+  }
+
+  .table-header,
+  .table-row {
+    grid-template-columns: 60px 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /* Smaller delete button column */
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .added-cart-container {
+    padding: 30px;
+    width: 90%;
+  }
+
+  .added-cart-container h2 {
+    font-size: 24px;
+  }
+
+  .table-header,
+  .table-row {
+    grid-template-columns: 50px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    font-size: 12px;
+    padding: 10px 15px;
+  }
+
+  .delete-btn {
+    font-size: 14px;
+  }
+
+  .continue-shopping-btn {
+    font-size: 15px;
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .added-cart-container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .added-cart-container h2 {
+    font-size: 20px;
+  }
+
+  .table-header,
+  .table-row {
+    grid-template-columns: 40px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    font-size: 11px;
+    padding: 8px 10px;
+  }
+
+  .delete-btn {
+    font-size: 12px;
+  }
+
+  .continue-shopping-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}

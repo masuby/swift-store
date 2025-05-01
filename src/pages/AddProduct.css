@@ -1,0 +1,215 @@
+/* Import Google Fonts (Poppins for a modern look) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.add-product-container {
+  font-family: 'Poppins', sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.add-product-container h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.back-link {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  color: #f1641e; /* Orange accent */
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.add-product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  color: #666;
+  font-size: 18px;
+}
+
+.add-product-form input,
+.add-product-form textarea {
+  width: 100%;
+  padding: 12px 15px 12px 40px; /* Extra padding for icon */
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fafafa;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.add-product-form textarea {
+  border-radius: 15px;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.add-product-form input:focus,
+.add-product-form textarea:focus {
+  border-color: #f1641e;
+  box-shadow: 0 0 5px rgba(241, 100, 30, 0.3);
+}
+
+.file-input {
+  padding: 8px 15px 8px 40px; /* Adjust padding for file input */
+  border: none;
+  background-color: transparent;
+}
+
+/* Popup Styles */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.popup-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.popup-option {
+  background-color: #f1641e;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.popup-option:hover {
+  background-color: #d8541b;
+}
+
+.popup-close {
+  margin-top: 20px;
+  background-color: #666;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.popup-close:hover {
+  background-color: #555;
+}
+
+.submit-btn {
+  background-color: #f1641e;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #d8541b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .add-product-container {
+    padding: 10px;
+  }
+
+  .add-product-form {
+    padding: 20px;
+  }
+
+  .add-product-form input,
+  .add-product-form textarea {
+    font-size: 14px;
+    padding: 10px 15px 10px 40px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-product-container h1 {
+    font-size: 24px;
+  }
+
+  .popup-content {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .popup-option {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .popup-close {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
