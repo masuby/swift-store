@@ -11,7 +11,7 @@
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -104,7 +104,7 @@
 }
 
 .newsletter-section input {
-  padding: 10px 15px;
+  padding: 10px 20px;
   font-size: 14px;
   font-family: 'Poppins', sans-serif;
   border: none;
@@ -195,14 +195,6 @@
     gap: 15px;
   }
 
-  .newsletter-section input {
-    width: 100%;
-  }
-
-  .newsletter-section button {
-    width: 100%;
-    padding: 12px;
-  }
 
   .download-section .download-btn {
     width: 100%;

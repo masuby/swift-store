@@ -31,9 +31,6 @@ function Navbar() {
 
         {/* Right: Sign In and Download App */}
         <div className="navbar-signin">
-          <Link to="/signin" className="signin-link">
-            Sign In
-          </Link>
           <button onClick={handleDownloadApp} className="download-app-btn">
             Download Swift App
           </button>
@@ -48,6 +45,9 @@ function Navbar() {
         <Link to="/added-cart" className="nav-button">
           Cart
         </Link>
+        <Link to="/signin" className='nav-button'>
+            Sign In
+          </Link>
       </div>
     </nav>
   );

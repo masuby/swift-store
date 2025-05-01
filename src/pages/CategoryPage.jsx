@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom'; // Import Link
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from '../firebase';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
@@ -72,14 +72,22 @@ function CategoryPage() {
           </button>
           <div className="product-row-cards" ref={ref}>
             {products.map(product => (
-              <div key={product.productId} className="product-card">
-                <img src={product.ImageUrl} alt={product.productName} />
-                <div className="product-info">
-                  <h4>{product.productName}</h4>
-                  <p>Price: ${product.productPrice}</p>
-                  <p>Type: {product.productType}</p>
+              <Link
+                to="/cart"
+                state={{ product }} // Pass the product data to Cart page
+                key={product.productId}
+                className="product-card-link" // Use the same class as Home.jsx
+              >
+                <div className="product-card">
+                  <img src={product.ImageUrl} alt={product.productName} />
+                  <div className="product-info">
+                    <h4>{product.productName}</h4>
+                    <p>Price: ${product.productPrice}</p>
+                    <p>Type: {product.productType}</p>
+                    <button className="add-to-cart-btn">Add to Cart</button> {/* Add button */}
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
           <button className="scroll-btn right" onClick={() => scroll(ref, 'right')}>

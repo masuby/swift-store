@@ -6,6 +6,7 @@
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #f9f9f9 0%, #e8ecef 100%);
   overflow: hidden;
+  max-width: 80%;
 }
 
 /* Branding Section (Left) */

@@ -4,7 +4,7 @@
 .home-container {
   font-family: 'Poppins', sans-serif;
   padding: 20px;
-  max-width: 90%;
+  max-width: 80%;
   margin: 0 auto;
   background-color: #f9f9f9;
 }
@@ -317,6 +317,9 @@ h2 {
   .banner-section {
     flex-direction: column;
   }
+  .home-container {
+    max-width: 98%;
+  }
 
   .banner-left {
     flex-direction: column;
@@ -377,7 +380,7 @@ h2 {
 
 @media (max-width: 480px) {
   .home-container {
-    width: 90%;
+    width: 100%;
     padding: 10px;
   }
 
